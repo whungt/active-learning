@@ -1,3 +1,9 @@
+This is my copy of active-learning from [here](https://github.com/google/active-learning). The original copy is written in python 2.7 and I've made some minor modicafication on codes to make it run in python 3.6. It's mainly about built-in functions urllib and range-list differences. Now I've tried toy example on dataset "banana", with sampler "margin" and "hierarchical" and verything seems fine.
+
+Programs are not totally free of bugs however. Running the run_experiment with banana dataset with k-center method will receive errors like a specific number is out of range of another number, which hasn'e been resolved yet. Will check later.
+
+
+
 # Active Learning Playground
 
 ## Introduction
