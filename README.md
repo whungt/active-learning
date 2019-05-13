@@ -3,6 +3,7 @@ This is my copy of active-learning from [here](https://github.com/google/active-
 Programs are not totally free of bugs however. Running the run_experiment with banana dataset with k-center method will receive errors like a specific number is out of range of another number, which hasn'e been resolved yet. Will check later.
 
 
+The following is the original ReadMe
 
 # Active Learning Playground
 
