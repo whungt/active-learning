@@ -158,6 +158,7 @@ def generate_one_curve(X,
     kwargs["N"] = n_active
     kwargs["already_selected"] = already_selected
     batch_AL = sampler.select_batch(**kwargs)
+    already_selected=list(already_selected)
     already_selected = already_selected + batch_AL
     kwargs["N"] = n_passive
     kwargs["already_selected"] = already_selected
@@ -248,6 +249,7 @@ def generate_one_curve(X,
     }
     new_batch = select_batch(sampler, uniform_sampler, active_p, n_sample,
                              selected_inds, **select_batch_inputs)
+    selected_inds=list(selected_inds)    
     selected_inds.extend(new_batch)
     print('Requested: %d, Selected: %d' % (n_sample, len(new_batch)))
     assert len(new_batch) == n_sample
