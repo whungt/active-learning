@@ -25,9 +25,9 @@ from __future__ import print_function
 from io import BytesIO
 import os
 import pickle
-import StringIO
+from io import StringIO
 import tarfile
-import urllib2
+import urllib
 
 import keras.backend as K
 from keras.datasets import cifar10
@@ -98,8 +98,8 @@ def get_wikipedia_talk_data():
   ANNOTATIONS_URL = 'https://ndownloader.figshare.com/files/7554637'
 
   def download_file(url):
-    req = urllib2.Request(url)
-    response = urllib2.urlopen(req)
+    #req = urllib2.Request(url)
+    response = urllib.request.urlopen(req)
     return response
 
   # Process comments
@@ -166,8 +166,8 @@ def get_cifar10():
   """
   url = 'http://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz'
   def download_file(url):
-    req = urllib2.Request(url)
-    response = urllib2.urlopen(req)
+    #req = urllib2.Request(url)
+    response = urllib.request.urlopen(req)
     return response
   response = download_file(url)
   tmpfile = BytesIO()
